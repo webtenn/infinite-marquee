@@ -1,0 +1,225 @@
+[fc-marquee = component] [fc-marquee = wrapper] {
+    -webkit-animation: loop-horizontal linear infinite;
+    -moz-animation: loop-horizontal linear infinite;
+    -o-animation: loop-horizontal linear infinite;
+}
+
+[fc-marquee = component] > div {
+    display: flex;
+}
+
+[fc-marquee-direction = horizontal] [fc-marquee = wrapper] {
+    -webkit-animation: loop-horizontal linear infinite;
+    -moz-animation: loop-horizontal linear infinite;
+    -o-animation: loop-horizontal linear infinite;
+}
+
+[fc-marquee-direction = vertical] [fc-marquee = wrapper] {
+    -webkit-animation: loop-vertical linear infinite;
+    -moz-animation: loop-vertical linear infinite;
+    -o-animation: loop-vertical linear infinite;
+}
+
+[fc-marquee-direction = horizontal-reversed] [fc-marquee = wrapper] {
+    -webkit-animation: loop-horizontal-reversed linear infinite;
+    -moz-animation: loop-horizontal-reversed linear infinite;
+    -o-animation: loop-horizontal-reversed linear infinite;
+}
+
+[fc-marquee-direction = vertical-reversed] [fc-marquee = wrapper] {
+    -webkit-animation: loop-vertical-reversed linear infinite;
+    -moz-animation: loop-vertical-reversed linear infinite;
+    -o-animation: loop-vertical-reversed linear infinite;
+}
+
+[fc-marquee-direction = horizontal] > div, [fc-marquee-direction = horizontal-reversed] > div {
+    display: flex;
+}
+
+[fc-marquee-direction = vertical] > div, [fc-marquee-direction = vertical-reversed] > div {
+    display: flex;
+    flex-direction: column;
+}
+
+[fc-marquee = wrapper] {
+    flex: 0 0 auto;
+}
+
+[fc-marquee = component]:hover [fc-marquee = wrapper],
+[fc-marquee = component]:focus-within [fc-marquee = wrapper] {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion) {
+    [fc-marquee = component] [fc-marquee = wrapper]{
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+}
+
+@-webkit-keyframes loop-horizontal {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+@-moz-keyframes loop-horizontal {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+@-o-keyframes loop-horizontal {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+@keyframes loop-horizontal {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes loop-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+}
+
+@-moz-keyframes loop-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+
+    100% {
+      transform: loop-vertical(-100%);
+    }
+}
+
+@-o-keyframes loop-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+}
+
+@keyframes loop-vertical {
+    0% {
+      transform: translateY(0%);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+}
+
+/* Reversed animations */
+
+@-webkit-keyframes loop-horizontal-reversed {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@-moz-keyframes loop-horizontal-reversed {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@-o-keyframes loop-horizontal-reversed {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@keyframes loop-horizontal-reversed {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes loop-vertical-reversed {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+}
+
+@-moz-keyframes loop-vertical-reversed {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+}
+
+@-o-keyframes loop-vertical-reversed {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+}
+
+@keyframes loop-vertical-reversed {
+    0% {
+      transform: translateY(-100%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+}
